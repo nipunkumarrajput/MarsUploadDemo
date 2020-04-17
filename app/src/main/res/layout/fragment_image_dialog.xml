@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/flExpand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:elevation="1dp">
+
+        <com.nipun.marsuploaddemo.custom.TouchImageView
+            android:id="@+id/ivExpand"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:contentDescription="description_zoom_touch_close"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ivUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:src="@drawable/ic_file_upload_black_24dp"
+            app:tint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            android:src="@drawable/ic_cancel_black_24dp" />
+    </FrameLayout>
+</layout>

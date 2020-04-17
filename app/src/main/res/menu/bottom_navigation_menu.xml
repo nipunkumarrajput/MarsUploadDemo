@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/galleryFragment"
+        android:icon="@drawable/ic_gallery_24dp"
+        android:title="@string/gallery" />
+
+    <item
+        android:id="@+id/uploadListFragment"
+        android:icon="@drawable/ic_image_list_24dp"
+        android:title="@string/upload_list" />
+
+
+</menu>

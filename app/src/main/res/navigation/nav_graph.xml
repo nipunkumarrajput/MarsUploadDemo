@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/galleryFragment">
+
+    <fragment
+        android:id="@+id/imageListFragment"
+        android:name="com.nipun.marsuploaddemo.fragments.ImageListFragment"
+        android:label="Gallery" />
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.nipun.marsuploaddemo.fragments.CameraFragment"
+        android:label="Camera">
+        <action
+            android:id="@+id/action_cameraFragment_to_uploadFragment"
+            app:destination="@id/uploadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadFragment"
+        android:name="com.nipun.marsuploaddemo.fragments.UploadFragment"
+        android:label="Upload Image">
+        <argument
+            android:name="imageUri"
+            android:defaultValue="file"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_uploadFragment_to_imageListFragment"
+            app:destination="@id/imageListFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/imageListFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_uploadFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/galleryFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.nipun.marsuploaddemo.fragments.GalleryFragment"
+        android:label="Gallery" />
+
+    <fragment
+        android:id="@+id/uploadListFragment"
+        android:name="com.nipun.marsuploaddemo.fragments.UploadListFragment"
+        android:label="Upload List" />
+</navigation>
